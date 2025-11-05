@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://tasknest-frontend-ln4l.onrender.com/",  //frontend URL
+    origin: "https://tasknest-frontend-ln4l.onrender.com",  //frontend URL
     credentials: true,
   })
 );
