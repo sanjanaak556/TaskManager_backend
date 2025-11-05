@@ -8,11 +8,16 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://tasknest-frontend-ln4l.onrender.com",  //frontend URL
+    origin: [
+      "https://tasknest-frontend-ln4l.onrender.com",
+      "https://tasknest-frontend-ln4l.onrender.com/",
+      "http://localhost:3000"  // for local dev
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 // Connect MongoDB
